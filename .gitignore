@@ -13,3 +13,9 @@ public/storybook
 .vercel
 repo-metadata.json
 src/@types/apollo
+
+# cypress
+**/cypress/screenshots
+**/cypress/videos
+**/cypress/fixtures/did.txt
+artifacts
