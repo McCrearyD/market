@@ -18,7 +18,7 @@ export default function FileInput({
 
   return (
     <InputGroup>
-      <input className={styles.input} {...props} type="url" />
+      <input className={styles.input} id={field.name} {...props} type="url" />
 
       <Button
         size="small"

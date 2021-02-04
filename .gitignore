@@ -17,5 +17,6 @@ src/@types/apollo
 # cypress
 **/cypress/screenshots
 **/cypress/videos
+**/cypress/downloads
 **/cypress/fixtures/did.txt
 artifacts
