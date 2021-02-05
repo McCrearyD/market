@@ -26,10 +26,10 @@ export function NetworkMonitor(): ReactElement {
 
       // add local dev values
       ...(chainId === '8996' && {
-        factoryAddress: '0x312213d6f6b5FCF9F56B7B8946A6C727Bf4Bc21f',
-        poolFactoryAddress: '0xF9E633CBeEB2A474D3Fe22261046C99e805beeC4',
-        fixedRateExchangeAddress: '0xefdcb16b16C7842ec27c6fdCf56adc316B9B29B8',
-        metadataContractAddress: '0xEBe77E16736359Bf0F9013F6017242a5971cAE76'
+        factoryAddress: '0x645439117eB378a6d35148452E287a038666Ed67',
+        poolFactoryAddress: '0x8F006DbB3727d18f032C5618595ecDD2EDE13b61',
+        fixedRateExchangeAddress: '0x19513460bc16254c74AE806683E906478A42B543',
+        metadataContractAddress: '0xD306b5edCDC7819E1EB80B43De6548931706A3f4'
       })
     }
 
@@ -49,23 +49,24 @@ export function NetworkMonitor(): ReactElement {
       clearInterval(balanceInterval)
     }
   }, [networkId, account])
+
   // Re-connect on mount when network is different from user network.
   // Bit nasty to just overwrite the initialConfig passed to OceanProvider
   // while it's connecting to that, but YOLO.
-  useEffect(() => {
-    if (!web3 || !networkId) return
+  // useEffect(() => {
+  //   if (!web3 || !networkId) return
 
-    async function init() {
-      if (
-        (await web3.eth.getChainId()) ===
-        (config as ConfigHelperConfig).networkId
-      )
-        return
+  //   async function init() {
+  //     if (
+  //       (await web3.eth.getChainId()) ===
+  //       (config as ConfigHelperConfig).networkId
+  //     )
+  //       return
 
-      await handleNetworkChanged(networkId)
-    }
-    init()
-  }, [web3, networkId])
+  //     await handleNetworkChanged(networkId)
+  //   }
+  //   init()
+  // }, [web3, networkId])
 
   // Handle network change events
   useEffect(() => {
