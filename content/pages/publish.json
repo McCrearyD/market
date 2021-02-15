@@ -1,15 +1,15 @@
 {
-  "title": "Publish",
-  "description": "Highlight the important features of your data set to make it more discoverable and catch the interest of data consumers.",
+  "title": "Equitize",
+  "description": "Highlight the important features of your company/project to make it more discoverable and catch the interest of potential investors.",
   "warning": "Given the beta status, publishing on Ropsten or Rinkeby first is strongly recommended. Please familiarize yourself with [the market](https://oceanprotocol.com/technology/marketplaces), [the risks](https://blog.oceanprotocol.com/on-staking-on-data-in-ocean-market-3d8e09eb0a13), and the [Terms of Use](/terms).",
   "form": {
-    "title": "Publish",
+    "title": "Equitize",
     "data": [
       {
         "name": "name",
-        "label": "Title",
+        "label": "Company/Project",
         "placeholder": "e.g. Shapes of Desert Plants",
-        "help": "Enter a concise title.",
+        "help": "Enter a concise title for your company/project.",
         "required": true
       },
       {
@@ -20,50 +20,18 @@
         "required": true
       },
       {
-        "name": "files",
-        "label": "File",
-        "placeholder": "e.g. https://file.com/file.json",
-        "help": "Please provide a URL to your data set file. This URL will be stored encrypted after publishing.",
-        "type": "files",
-        "required": true
-      },
-      {
-        "name": "links",
-        "label": "Sample file",
-        "placeholder": "e.g. https://file.com/samplefile.json",
-        "help": "Please provide a URL to a sample of your data set file. This file should reveal the data structure of your data set, e.g. by including the header and one line of a CSV file. This file URL will be publicly available after publishing.",
-        "type": "files"
-      },
-      {
-        "name": "access",
-        "label": "Access Type",
-        "help": "Choose how you want your files to be accessible for the specified price.",
-        "type": "select",
-        "options": ["Download"],
-        "required": true
-      },
-      {
-        "name": "timeout",
-        "label": "Timeout",
-        "help": "Define how long buyers should be able to download the data set again after the initial purchase.",
-        "type": "select",
-        "options": ["Forever", "1 day", "1 week", "1 month", "1 year"],
-        "sortOptions": false,
-        "required": true
-      },
-      {
         "name": "dataTokenOptions",
-        "label": "Datatoken Name & Symbol",
+        "label": "Equity Name & Symbol",
         "type": "datatoken",
-        "help": "The datatoken for this data set will be created with this name & symbol.",
+        "help": "Equity for this entity will be created with this name & symbol.",
         "required": true
       },
       {
         "name": "author",
         "label": "Author",
         "placeholder": "e.g. Jelly McJellyfish",
-        "help": "Give proper attribution for your data set.",
-        "required": true
+        "help": "Creator of the company/project.",
+        "required": false
       },
       {
         "name": "tags",
@@ -79,6 +47,6 @@
         "required": true
       }
     ],
-    "success": "Asset Created!"
+    "success": "Entity Created!"
   }
 }

@@ -1,13 +1,13 @@
 {
-  "description": "Update selected metadata of this data set. Updating metadata will create an on-chain transaction you have to approve in your wallet.",
+  "description": "Update selected metadata of this equity. Updating metadata will create an on-chain transaction you have to approve in your wallet.",
   "form": {
     "success": "🎉 Successfully updated. 🎉",
     "successAction": "Close",
-    "error": "Updating DDO failed.",
+    "error": "Updating failed.",
     "data": [
       {
         "name": "name",
-        "label": "New Title",
+        "label": "New Company/Project Name",
         "placeholder": "e.g. Shapes of Desert Plants",
         "help": "Enter a concise title.",
         "required": true
@@ -18,15 +18,6 @@
         "help": "Add a thorough description with as much detail as possible. You can use [Markdown](https://daringfireball.net/projects/markdown/basics).",
         "type": "textarea",
         "rows": 10,
-        "required": true
-      },
-      {
-        "name": "timeout",
-        "label": "Timeout",
-        "help": "Define how long buyers should be able to download the data set again after the initial purchase.",
-        "type": "select",
-        "options": ["Forever", "1 day", "1 week", "1 month", "1 year"],
-        "sortOptions": false,
         "required": true
       }
     ]
