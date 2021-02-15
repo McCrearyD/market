@@ -8,38 +8,38 @@ export const validationSchema: Yup.SchemaOf<MetadataPublishForm> = Yup.object()
     name: Yup.string()
       .min(4, (param) => `Title must be at least ${param.min} characters`)
       .required('Required'),
-    author: Yup.string().required('Required'),
     dataTokenOptions: Yup.object()
       .shape({
         name: Yup.string(),
         symbol: Yup.string()
       })
       .required('Required'),
-    files: Yup.array<FileMetadata>().required('Required').nullable(),
+    // files: Yup.array<FileMetadata>().required('Required').nullable(),
     description: Yup.string().min(10).required('Required'),
-    timeout: Yup.string().required('Required'),
-    access: Yup.string()
+    // timeout: Yup.string().required('Required'),
+    /* access: Yup.string()
       .matches(/Compute|Download/g, { excludeEmptyString: true })
-      .required('Required'),
+      .required('Required'),*/
     termsAndConditions: Yup.boolean().required('Required'),
 
     // ---- optional fields ----
-    tags: Yup.string().nullable(),
-    links: Yup.array<FileMetadata[]>().nullable()
+    author: Yup.string().nullable(),
+    tags: Yup.string().nullable()
+    // links: Yup.array<FileMetadata[]>().nullable()
   })
   .defined()
 
 export const initialValues: Partial<MetadataPublishForm> = {
   name: '',
-  author: '',
   dataTokenOptions: {
     name: '',
     symbol: ''
   },
-  files: '',
+  // files: '',
   description: '',
-  timeout: 'Forever',
-  access: '',
+  // timeout: 'Forever',
+  // access: '',
   termsAndConditions: false,
+  author: '',
   tags: ''
 }

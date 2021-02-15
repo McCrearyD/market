@@ -28,15 +28,15 @@ export interface MetadataPublishForm {
   // ---- required fields ----
   name: string
   description: string
-  files: string | File[]
-  author: string
-  timeout: string
+  // files: string | File[]
+  // timeout: string
   dataTokenOptions: DataTokenOptions
-  access: 'Download' | 'Compute' | string
+  // access: 'Download' | 'Compute' | string
   termsAndConditions: boolean
   // ---- optional fields ----
+  author: string
   tags?: string
-  links?: string | File[]
+  // links?: string | File[]
 }
 
 export interface ServiceMetadataMarket extends ServiceMetadata {
